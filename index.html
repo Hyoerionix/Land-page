@@ -30,7 +30,7 @@
             background-color: black;
         }
         .top-image img {
-            width: 100%; /* תשמור על גודל פרופורציונלי */
+            width: 90%; /* התמונה תתפוס את רוב רוחב המסך */
             height: auto;
             object-fit: contain; /* שמירה על פרופורציות */
         }
@@ -70,10 +70,10 @@
         /* עיצוב לדסקטופ */
         @media (min-width: 1024px) {
             .top-image {
-                max-height: 35vh; /* הצמצום הזה עוזר שהתמונה לא תהיה גבוהה מדי */
+                max-height: 40vh; /* הגדלתי את גובה התמונה ב-30% */
             }
             .top-image img {
-                width: 100%; /* שמירה על רוחב מלא ללא מתיחה מוגזמת */
+                width: 120%; /* מתיחה ב-30% לצדדים */
                 height: auto;
                 object-fit: contain; /* שמירה על פרופורציות */
             }
