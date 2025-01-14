@@ -12,42 +12,43 @@
             padding: 0;
             background-color: #000;
             color: #ffffff;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
         }
-        .container {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-        }
-        .left-side {
-            width: 50%;
-            background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
-            background-size: contain;
+        .top-image {
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            background-color: black;
         }
-        .right-side {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .top-image img {
+            width: 90%;
+            height: auto;
+            object-fit: contain;
+            background-color: black;
+        }
+        header, section {
             padding: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.8);
+            margin: 10px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        .right-side h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        header h1 {
+            font-size: 3em;
+            margin: 0;
         }
-        .right-side p {
+        header p {
             font-size: 1.5em;
-            margin-bottom: 20px;
+            margin: 10px 0 0;
+        }
+        section p {
+            font-size: 1.5em;
         }
         .cta-button {
             display: inline-block;
@@ -56,37 +57,67 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 15px;
             font-size: 1.2em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* התאמות למובייל */
-        @media (max-width: 1024px) {
-            .container {
-                flex-direction: column;
+        /* עיצוב לדסקטופ */
+        @media (min-width: 1024px) {
+            body {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px;
             }
-            .left-side {
-                width: 100%;
-                height: 35vh;
-            }
-            .right-side {
-                width: 100%;
+            .top-image {
+                width: 50%;
                 height: auto;
+                padding: 10px;
+                box-sizing: border-box;
+                background-color: #000;
+                border: 2px solid #000; /* מסגרת שחורה דקה */
+            }
+            .top-image img {
+                width: 95%; /* מוודא שהתמונה לא חתוכה */
+                height: auto;
+                object-fit: contain;
+            }
+            header, section {
+                width: 45%;
+                text-align: left;
+                margin: 0;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+            section p {
+                font-size: 1.2em;
+            }
+        }
+        /* עיצוב במובייל */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 2.5em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-side"></div>
-        <div class="right-side">
+    <div class="top-image">
+        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
+    </div>
+    <div>
+        <header>
             <h1>פיתוח אפליקציות</h1>
             <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+        </header>
+        <section>
             <p>הפכו היום את הרעיון שלכם למציאות!</p>
             <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-        </div>
+        </section>
     </div>
 </body>
 </html>
