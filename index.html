@@ -11,39 +11,47 @@
             margin: 0;
             padding: 0;
             background-color: #000;
-            color: #fff;
-            height: 100vh;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        /* ברירת מחדל במובייל */
+        .top-image {
+            width: 100%;
+            height: auto;
+            max-height: 35vh; /* ברירת מחדל לגובה */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            background-color: black;
         }
-        .content {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: 100%;
+        .top-image img {
+            width: 90%; /* התמונה תתפוס את רוב רוחב המסך */
+            height: auto;
+            object-fit: contain; /* שמירה על פרופורציות */
         }
-        .text-content {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+        header, section {
             padding: 20px;
-            text-align: left;
+            margin: 10px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-        .text-content header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 3em; /* גודל טקסט בכותרת לדסקטופ */
+            margin: 0;
         }
-        .text-content header p {
-            font-size: 1.5em;
-            margin-bottom: 20px;
+        header p {
+            font-size: 1.5em; /* הגדלתי במעט את הטקסט הזה */
+            margin: 10px 0 0;
         }
-        .text-content section p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
+        section p {
+            font-size: 1.5em; /* הגדלתי את הטקסט במובייל */
         }
         .cta-button {
             display: inline-block;
@@ -52,56 +60,46 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 15px;
             font-size: 1.2em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .cta-button:hover {
             background-color: #16a085;
         }
-        .top-image {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .top-image img {
-            width: 85%;
-            height: auto;
-            object-fit: contain;
-        }
-        /* עיצוב למובייל */
-        @media (max-width: 1024px) {
-            .content {
-                flex-direction: column;
+        /* עיצוב לדסקטופ */
+        @media (min-width: 1024px) {
+            .top-image {
+                max-height: 30vh; /* התאמת גובה לתמונה במסכים גדולים */
             }
-            .text-content, .top-image {
-                width: 100%;
+            .top-image img {
+                width: 25%; /* הקטנה ל-25% */
                 height: auto;
-                text-align: center;
-                align-items: center;
+                object-fit: contain; /* שמירה על פרופורציות */
             }
-            .text-content {
-                align-items: center;
-                padding: 10px;
+            section p {
+                font-size: 2em; /* הגדלת הטקסט במסכים גדולים */
+            }
+        }
+        /* עיצוב במובייל */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 2.5em; /* הקטנתי את גודל הטקסט במובייל */
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <div class="text-content">
-            <header>
-                <h1>פיתוח אפליקציות</h1>
-                <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
-            </header>
-            <section>
-                <p>הפכו היום את הרעיון שלכם למציאות!</p>
-                <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-            </section>
-        </div>
-        <div class="top-image">
-            <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
-        </div>
+    <div class="top-image">
+        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
     </div>
+    <header>
+        <h1>פיתוח אפליקציות</h1>
+        <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+    </header>
+    <section>
+        <p>הפכו היום את הרעיון שלכם למציאות!</p>
+        <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
+    </section>
 </body>
 </html>
