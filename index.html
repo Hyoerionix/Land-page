@@ -16,67 +16,96 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            height: 100vh; /* גובה מלא למסך */
-            overflow: hidden; /* מניעת גלילה */
+            height: 100vh;
+            overflow: hidden;
         }
-        .top-image {
-            width: 100%;
-            height: 66.67vh; /* שני שלישים מהמסך */
-            background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
-            background-size: contain; /* שמירה על פרופורציות התמונה */
-        }
-        header {
-            width: 100%;
-            height: 33.33vh; /* שליש מהמסך */
-            text-align: center;
-            padding: 20px 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* רקע שחור שקוף */
+        .container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            width: 100%;
+            height: 100%;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0 0 10px;
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
         }
-        header p {
-            font-size: 1.2em;
-            margin: 0 0 10px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #1abc9c;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .cta-button:hover {
-            background-color: #16a085;
+        /* עיצוב לדסקטופ */
+        @media (min-width: 1024px) {
+            .content {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 100%;
+            }
+            .text-container {
+                width: 50%;
+                padding: 20px;
+                box-sizing: border-box;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .text-container h1 {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+            .text-container p {
+                font-size: 1.2em;
+                margin-bottom: 20px;
+            }
+            .cta-button {
+                display: inline-block;
+                background-color: #1abc9c;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 1.2em;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .cta-button:hover {
+                background-color: #16a085;
+            }
+            .image-container {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
+                background-size: contain; /* שמירה על פרופורציות התמונה */
+            }
         }
         /* עיצוב מובייל */
         @media (max-width: 1024px) {
-            .top-image {
-                height: auto;
-                max-height: 35vh;
+            .content {
+                flex-direction: column;
             }
-            header {
-                height: auto;
+            .text-container {
+                width: 100%;
                 padding: 20px;
+            }
+            .image-container {
+                width: 100%;
+                height: 35vh;
+                background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
+                background-size: contain;
             }
         }
     </style>
 </head>
 <body>
-    <div class="top-image"></div>
-    <header>
-        <h1>פיתוח אפליקציות</h1>
-        <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
-        <p>הפכו היום את הרעיון שלכם למציאות!</p>
-        <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-    </header>
+    <div class="content">
+        <div class="text-container">
+            <h1>פיתוח אפליקציות</h1>
+            <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+            <p>הפכו היום את הרעיון שלכם למציאות!</p>
+            <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
+        </div>
+        <div class="image-container"></div>
+    </div>
 </body>
 </html>
