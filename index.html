@@ -48,7 +48,7 @@
         }
         header p {
             font-size: 1.5em; /* הגדלתי במעט את הטקסט הזה */
-            margin: 10px 0 0;
+            margin: 10px 0 10px; /* צמצום המרווח בין הפסקאות */
         }
         section p {
             font-size: 1.5em; /* הגדלתי את הטקסט במובייל */
@@ -67,18 +67,19 @@
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* עיצוב לדסקטופ */
+        /* עיצוב לדסקטופ בלבד */
         @media (min-width: 1024px) {
             .top-image {
                 max-height: 40vh; /* הגדלתי את גובה התמונה ב-30% */
             }
             .top-image img {
-                width: 120%; /* מתיחה ב-30% לצדדים */
+                width: 125%; /* הגדלה ב-25% */
                 height: auto;
                 object-fit: contain; /* שמירה על פרופורציות */
             }
             section p {
                 font-size: 2em; /* הגדלת הטקסט במסכים גדולים */
+                margin-top: 10px; /* צמצום המרווח כדי למנוע גלילה למטה */
             }
         }
         /* עיצוב במובייל */
