@@ -17,50 +17,38 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden; /* מונע גלילה */
         }
 
-        /* עיצוב ברירת מחדל */
+        header {
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em; /* הקטנתי מעט */
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em; /* הקטנתי מעט */
+            line-height: 1.5;
+        }
         .top-image {
-            width: 100%;
-            height: auto;
-            max-height: 35vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            background-color: black;
+            margin: 10px auto;
         }
         .top-image img {
-            width: 90%;
+            width: 60%; /* התאמת גודל התמונה */
             height: auto;
             object-fit: contain;
         }
-        header {
-            padding: 20px;
-            margin: 10px auto;
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.5em;
-            margin: 10px 0 0;
-        }
         section {
-            padding: 20px;
             margin: 10px auto;
             max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         section p {
             font-size: 1.5em;
+            margin-bottom: 10px;
         }
         .cta-button {
             display: inline-block;
@@ -69,51 +57,29 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 15px;
             font-size: 1.2em;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .cta-button:hover {
-            background-color: #16a085;
+            margin-top: 10px;
         }
 
         /* עיצוב לדסקטופ בלבד */
         @media (min-width: 1024px) {
+            body {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden; /* מונע גלילה */
+            }
             header h1 {
-                font-size: 6em; /* הגדלה פי 2 */
-                margin-bottom: 20px;
+                font-size: 3em;
             }
             header p {
-                font-size: 3em; /* הגדלה פי 2 לשני המשפטים */
-                line-height: 1.5;
-            }
-            .top-image {
-                order: 2; /* התמונה מתחת לטקסט */
-                margin: 20px 0;
-            }
-            section p {
-                margin-top: 20px;
-                font-size: 2em;
-            }
-            .cta-button {
-                margin-top: 20px;
                 font-size: 1.5em;
             }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>פיתוח אפליקציות</h1>
-        <p>לאנדרואיד ו-iOS,<br> לכל צורך ומטרה</p>
-        <p>עם פתרונות טכנולוגיים מותאמים אישית</p>
-    </header>
-    <div class="top-image">
-        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
-    </div>
-    <section>
-        <p>הפכו היום את הרעיון שלכם למציאות!</p>
-        <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-    </section>
-</body>
-</html>
+            .top-image img {
+                width: 50%; /* מתאים למסכי דסקטופ */
+            }
+            section p {
+                font-size: 1.8em;
+            }
+            .cta-button {
+                font-size: 1
