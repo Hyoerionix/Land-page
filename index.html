@@ -20,16 +20,17 @@
         }
         .top-image {
             width: 100%;
-            height: auto;
-            max-height: 35vh; /* ברירת מחדל לגובה */
+            height: 40vh; /* ברירת מחדל לגובה */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            background-color: black;
         }
         .top-image img {
-            max-width: 100%; /* שמירה על פרופורציות */
-            max-height: 100%; /* מניעת חיתוך */
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* שמירה על פרופורציות */
         }
         header, section {
             padding: 20px;
@@ -49,7 +50,6 @@
         }
         section p {
             font-size: 1.2em;
-            margin-bottom: 15px; /* ברירת מחדל למרווח */
         }
         .cta-button {
             display: inline-block;
@@ -65,17 +65,16 @@
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* התאמות למסכי מחשב */
         @media (min-width: 1024px) {
             .top-image {
-                max-height: 17.5vh; /* גובה קטן יותר בדסקטופ */
+                height: 30vh; /* הקטנת הגובה למסכי מחשב */
             }
             .top-image img {
-                max-width: 50%; /* הקטנת רוחב התמונה בחצי */
-                height: auto; /* שמירה על פרופורציות */
+                max-width: 80%; /* הקטנת רוחב התמונה */
+                object-fit: contain; /* שמירה על פרופורציות */
             }
             section p {
-                margin-bottom: 5px; /* צמצום המרווח בין משפטים בדסקטופ */
+                font-size: 2em; /* הגדלת הטקסט בדסקטופ */
             }
         }
     </style>
@@ -86,7 +85,7 @@
     </div>
     <header>
         <h1>פיתוח אפליקציות בהתאמה אישית - ברק אהרונוב</h1>
-        <p>איכות, מקצועיות ומחירים משתלמים במיוחד!</p>
+        <p>חדשנות ומצוינות שמדברות בעד עצמן.</p>
     </header>
     <section>
         <p>רוצים להפוך את הרעיון שלכם למציאות?</p>
