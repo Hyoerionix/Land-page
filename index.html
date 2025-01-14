@@ -20,16 +20,17 @@
         }
         .top-image {
             width: 100%;
-            height: 35vh; /* גובה יחסי */
-            overflow: hidden;
+            height: auto; /* גובה אוטומטי */
+            max-height: 50vh; /* מגבלת גובה למסכים גדולים */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            background-color: black;
         }
         .top-image img {
-            width: auto; /* שמירה על פרופורציות */
-            height: 100%;
-            display: block;
+            max-width: 100%; /* שמירה על פרופורציות */
+            max-height: 100%; /* מניעת חיתוך */
         }
         header, section {
             padding: 20px;
@@ -64,17 +65,9 @@
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* התאמות למסכי מחשב */
         @media (min-width: 1024px) {
-            .top-image {
-                height: 25vh; /* גובה קטן יותר למסכים גדולים */
-            }
-            .top-image img {
-                height: auto; /* התאמה פרופורציונלית */
-                width: 70%; /* הקטנת הרוחב במסכי מחשב */
-            }
             section p {
-                font-size: 2em; /* הגדלת הטקסט "רוצים להפוך" */
+                font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
             }
         }
     </style>
