@@ -1,3 +1,4 @@
+הנה התוכן המלא של הקובץ index.html ששלחת. תוכל להעתיק אותו ולהדביק אותו במקום הרצוי ב-GitHub:
 
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
@@ -11,39 +12,36 @@
             font-family: 'Assistant', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            direction: rtl;
-            color: #333;
+            background-color: #000;
+            color: #ffffff;
+            text-align: center;
+            height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
+            overflow: hidden; /* Prevent scrolling */
         }
-        header {
-            background-color: #1abc9c;
-            color: white;
+        .top-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        header, section {
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
-            text-align: center;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin: 5px; /* Reduce margin to move sections closer */
             width: 90%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         header h1 {
-            font-size: 1.8em;
+            font-size: 2em;
+            margin: 0;
         }
-        section {
-            background-color: white;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            text-align: center;
-        }
-        h2, p {
-            margin: 10px 0;
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0 0; /* Reduce spacing below the paragraph */
         }
         .cta-button {
             display: inline-block;
@@ -52,9 +50,9 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
-            font-size: 1em;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 5px; /* Reduce spacing above the button */
+            font-size: 1.2em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .cta-button:hover {
             background-color: #16a085;
@@ -62,14 +60,19 @@
     </style>
 </head>
 <body>
+    <div class="top-image">
+        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
+    </div>
     <header>
         <h1>פיתוח אפליקציות בהתאמה אישית - ברק אהרונוב</h1>
         <p>איכות, מקצועיות ומחירים משתלמים במיוחד!</p>
     </header>
-    <section>
-        <h2>רוצים להפוך את הרעיון שלכם למציאות?</h2>
-        <p>לחצו על הקישור לוואטסאפ ותנו לנו לעשות את הקסם!</p>
+    <section style="margin-top: -20px;"> <!-- Move the section further up -->
+        <p>רוצים להפוך את הרעיון שלכם למציאות?</p>
         <a href="https://wa.me/972542309598" class="cta-button">שלח הודעה בוואטסאפ</a>
     </section>
 </body>
 </html>
+
+אם יש עוד משהו שצריך לעדכן, אני כאן!
+
