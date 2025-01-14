@@ -12,24 +12,28 @@
             padding: 0;
             background-color: #000;
             color: #ffffff;
-            text-align: center;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
+            justify-content: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
         .top-image {
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background-color: black;
         }
         .top-image img {
-            width: 90%;
+            width: 100%;
             height: auto;
             object-fit: contain;
-            background-color: black;
         }
         header, section {
             padding: 20px;
@@ -69,32 +73,37 @@
             body {
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: flex-start;
-                padding: 20px;
+                align-items: center;
+            }
+            .content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                height: 100vh;
             }
             .top-image {
                 width: 50%;
-                height: auto;
-                padding: 10px;
-                box-sizing: border-box;
-                background-color: #000;
-                border: 2px solid #000; /* מסגרת שחורה דקה */
+                height: 100%;
             }
             .top-image img {
-                width: 95%; /* מוודא שהתמונה לא חתוכה */
-                height: auto;
-                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-            header, section {
-                width: 45%;
+            .text-content {
+                width: 50%;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 text-align: left;
-                margin: 0;
             }
             header h1 {
-                font-size: 2.5em;
+                font-size: 3em;
             }
             section p {
-                font-size: 1.2em;
+                font-size: 1.5em;
             }
         }
         /* עיצוב במובייל */
@@ -106,18 +115,20 @@
     </style>
 </head>
 <body>
-    <div class="top-image">
-        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
-    </div>
-    <div>
-        <header>
-            <h1>פיתוח אפליקציות</h1>
-            <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
-        </header>
-        <section>
-            <p>הפכו היום את הרעיון שלכם למציאות!</p>
-            <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-        </section>
+    <div class="content">
+        <div class="top-image">
+            <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
+        </div>
+        <div class="text-content">
+            <header>
+                <h1>פיתוח אפליקציות</h1>
+                <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+            </header>
+            <section>
+                <p>הפכו היום את הרעיון שלכם למציאות!</p>
+                <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
+            </section>
+        </div>
     </div>
 </body>
 </html>
