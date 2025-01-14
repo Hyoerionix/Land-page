@@ -20,18 +20,17 @@
         }
         .top-image {
             width: 100%;
-            height: 100vh; /* הגבלת גובה המסך */
-            overflow: hidden;
-            background-color: black;
+            height: 100vh; /* הגבלת גובה למסך */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            background-color: black;
         }
         .top-image img {
-            width: 100%; /* תמונה תתפוס את כל הרוחב */
-            height: auto;
-            object-fit: contain; /* שמירה על פרופורציות, ללא חיתוך */
-            object-position: center center; /* יישור התמונה במרכז */
+            width: 100%; /* התמונה תתפוס את כל הרוחב */
+            height: 100%; /* הגובה יהיה 100% כדי להימנע מחיתוך */
+            object-fit: contain; /* שמירה על פרופורציות ללא חיתוך */
         }
         header, section {
             padding: 20px;
@@ -67,6 +66,13 @@
             background-color: #16a085;
         }
         @media (min-width: 1024px) {
+            .top-image {
+                height: 45vh; /* הקטנה בכדי שתשאר בגבולות */
+            }
+            .top-image img {
+                width: 80%; /* הגבלת רוחב התמונה */
+                height: auto; /* שמירה על פרופורציות */
+            }
             section p {
                 font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
             }
@@ -78,8 +84,8 @@
         <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
     </div>
     <header>
-        <h1>פיתוח אפליקציות בהתאמה אישית - ברק אהרונוב</h1>
-        <p>חדשנות ומצוינות שמדברות בעד עצמן.</p>
+        <h1>פיתוח אפליקציות בהתאמה אישית</h1>
+        <p>חדשנות ומצוינות שמדברות בעד עצמן</p>
     </header>
     <section>
         <p>רוצים להפוך את הרעיון שלכם למציאות?</p>
