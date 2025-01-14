@@ -20,13 +20,12 @@
         }
         .top-image {
             width: 100%;
-            height: auto; /* גובה אוטומטי */
-            max-height: 50vh; /* מגבלת גובה למסכים גדולים */
+            height: auto;
+            max-height: 35vh; /* ברירת מחדל לגובה */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background-color: black;
         }
         .top-image img {
             max-width: 100%; /* שמירה על פרופורציות */
@@ -50,6 +49,7 @@
         }
         section p {
             font-size: 1.2em;
+            margin-bottom: 15px; /* ברירת מחדל למרווח */
         }
         .cta-button {
             display: inline-block;
@@ -65,9 +65,17 @@
         .cta-button:hover {
             background-color: #16a085;
         }
+        /* התאמות למסכי מחשב */
         @media (min-width: 1024px) {
+            .top-image {
+                max-height: 17.5vh; /* גובה קטן יותר בדסקטופ */
+            }
+            .top-image img {
+                max-width: 50%; /* הקטנת רוחב התמונה בחצי */
+                height: auto; /* שמירה על פרופורציות */
+            }
             section p {
-                font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
+                margin-bottom: 5px; /* צמצום המרווח בין משפטים בדסקטופ */
             }
         }
     </style>
