@@ -18,10 +18,16 @@
             align-items: center;
             min-height: 100vh;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
         .top-image {
             width: 100%;
             height: auto;
-            max-height: 35vh; /* גובה מקסימלי במובייל */
+            max-height: 35vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,7 +39,7 @@
             height: auto;
             object-fit: contain;
         }
-        header, section {
+        header {
             padding: 20px;
             margin: 10px auto;
             max-width: 800px;
@@ -47,11 +53,8 @@
             margin: 0;
         }
         header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-        }
-        section p {
             font-size: 1.5em;
+            margin: 10px 0;
         }
         .cta-button {
             display: inline-block;
@@ -80,40 +83,35 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 5%;
             }
             .top-image img {
-                height: 90%; /* התמונה קטנה ב-10% */
+                height: 90%;
                 width: auto;
-                object-fit: contain;
             }
             header {
                 max-width: none;
                 width: 50%;
                 margin: 0;
                 padding: 40px;
-                text-align: right;
+                text-align: center;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-            }
-            section {
-                text-align: right;
             }
         }
     </style>
 </head>
 <body>
-    <div class="top-image">
-        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
-    </div>
-    <header>
-        <h1>פיתוח אפליקציות</h1>
-        <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
-        <p>הפכו היום את הרעיון שלכם למציאות!</p>
-        <section>
+    <div class="container">
+        <div class="top-image">
+            <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
+        </div>
+        <header>
+            <h1>פיתוח אפליקציות</h1>
+            <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+            <p>הפכו היום את הרעיון שלכם למציאות!</p>
             <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-        </section>
-    </header>
+        </header>
+    </div>
 </body>
 </html>
