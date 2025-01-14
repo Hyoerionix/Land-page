@@ -19,16 +19,21 @@
             min-height: 100vh;
         }
         .top-image {
+            position: relative;
             width: 100%;
-            height: 35vh; /* הגבלת גובה ל-35% מגובה המסך */
+            height: 35vh; /* הגבלת גובה */
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
         .top-image img {
-            width: auto; /* שמירה על פרופורציות */
-            height: 100%; /* הגבלת גובה */
+            position: absolute;
+            top: 50%; /* מרכז אנכי */
+            left: 50%; /* מרכז אופקי */
+            transform: translate(-50%, -50%); /* שמירה על מרכזיות */
+            width: auto;
+            height: 100%;
         }
         header, section {
             padding: 20px;
@@ -62,7 +67,7 @@
         }
         @media (min-width: 1024px) {
             .top-image {
-                height: 50vh; /* התאמה למסכים גדולים */
+                height: 50vh; /* למסכים גדולים */
             }
         }
     </style>
