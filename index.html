@@ -18,6 +18,7 @@
             align-items: center;
             min-height: 100vh;
         }
+        /* ברירת מחדל במובייל */
         .top-image {
             width: 100%;
             height: auto;
@@ -29,7 +30,7 @@
             background-color: black;
         }
         .top-image img {
-            width: 40%; /* הגבלת רוחב התמונה ל-40% */
+            width: 90%; /* התמונה תתפוס את רוב רוחב המסך */
             height: auto;
             object-fit: contain; /* שמירה על פרופורציות */
         }
@@ -66,9 +67,18 @@
         .cta-button:hover {
             background-color: #16a085;
         }
+        /* עיצוב בדסקטופ */
         @media (min-width: 1024px) {
+            .top-image {
+                max-height: 30vh; /* התאמת גובה לדסקטופ */
+            }
+            .top-image img {
+                width: 25%; /* הגבלת רוחב התמונה ל-25% בדסקטופ */
+                height: auto;
+                object-fit: contain; /* שמירה על פרופורציות */
+            }
             section p {
-                font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
+                font-size: 2em; /* הגדלת הטקסט במסכים גדולים */
             }
         }
     </style>
