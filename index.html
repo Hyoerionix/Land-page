@@ -20,7 +20,8 @@
         }
         .top-image {
             width: 100%;
-            height: 40vh; /* ברירת מחדל לגובה */
+            height: auto;
+            max-height: 35vh; /* ברירת מחדל לגובה */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,11 +68,11 @@
         }
         @media (min-width: 1024px) {
             .top-image {
-                height: 30vh; /* הקטנת הגובה למסכי מחשב */
+                max-height: 30vh; /* גובה קטן יותר בדסקטופ */
             }
             .top-image img {
-                max-width: 80%; /* הקטנת רוחב התמונה */
-                object-fit: contain; /* שמירה על פרופורציות */
+                max-width: 40%; /* הגבלת רוחב התמונה ל-40% במסכי מחשב */
+                height: auto; /* שמירה על פרופורציות */
             }
             section p {
                 font-size: 2em; /* הגדלת הטקסט בדסקטופ */
