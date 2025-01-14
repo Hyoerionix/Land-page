@@ -21,20 +21,20 @@
         }
         .top-image {
             width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 66.67vh; /* שני שלישים מהמסך */
             background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
-            background-size: contain; /* שמירה על כל התמונה ללא חיתוך */
+            background-size: contain; /* שמירה על פרופורציות התמונה */
         }
         header {
             width: 100%;
+            height: 33.33vh; /* שליש מהמסך */
             text-align: center;
             padding: 20px 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* רקע שחור שקוף למלל */
-            position: absolute;
-            bottom: 0; /* הצמדת המלל לתחתית המסך */
+            background-color: rgba(0, 0, 0, 0.8); /* רקע שחור שקוף */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         header h1 {
             font-size: 2.5em;
@@ -56,6 +56,17 @@
         }
         .cta-button:hover {
             background-color: #16a085;
+        }
+        /* עיצוב מובייל */
+        @media (max-width: 1024px) {
+            .top-image {
+                height: auto;
+                max-height: 35vh;
+            }
+            header {
+                height: auto;
+                padding: 20px;
+            }
         }
     </style>
 </head>
