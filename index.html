@@ -21,12 +21,11 @@
         .top-image {
             width: 100%;
             height: auto;
-            max-height: 35vh; /* ברירת מחדל לגובה */
+            max-height: 35vh; /* ברירת מחדל לגובה במסכים קטנים */
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background-color: black;
         }
         .top-image img {
             max-width: 100%;
@@ -68,14 +67,14 @@
         }
         @media (min-width: 1024px) {
             .top-image {
-                max-height: 30vh; /* גובה קטן יותר בדסקטופ */
+                max-height: 17.5vh; /* הקטנה ב-50% במסכי מחשב */
             }
             .top-image img {
-                max-width: 40%; /* הגבלת רוחב התמונה ל-40% במסכי מחשב */
+                max-width: 50%; /* הקטנת רוחב התמונה ב-50% */
                 height: auto; /* שמירה על פרופורציות */
             }
             section p {
-                font-size: 2em; /* הגדלת הטקסט בדסקטופ */
+                font-size: 2em; /* הגדלת הטקסט למסכי מחשב */
             }
         }
     </style>
