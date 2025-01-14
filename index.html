@@ -20,15 +20,18 @@
         }
         .top-image {
             width: 100%;
-            height: 100vh; /* הגבלת גובה התמונה לכל הגובה */
+            height: 100vh; /* הגבלת גובה המסך */
             overflow: hidden;
             background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .top-image img {
-            width: 100%; /* התמונה תתפוס את כל רוחב המסך */
-            height: 100%; /* הגובה יתפוס את כל המסך */
-            object-fit: contain; /* שמירה על פרופורציות בלי חיתוך */
-            object-position: center top; /* יישור התמונה מהחלק העליון */
+            width: 100%; /* תמונה תתפוס את כל הרוחב */
+            height: auto;
+            object-fit: contain; /* שמירה על פרופורציות, ללא חיתוך */
+            object-position: center center; /* יישור התמונה במרכז */
         }
         header, section {
             padding: 20px;
@@ -65,7 +68,7 @@
         }
         @media (min-width: 1024px) {
             section p {
-                font-size: 2em; /* הגדלת הטקסט בדסקטופ */
+                font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
             }
         }
     </style>
