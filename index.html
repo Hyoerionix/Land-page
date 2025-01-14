@@ -20,18 +20,18 @@
         }
         .top-image {
             width: 100%;
-            height: auto;
-            max-height: 35vh; /* ברירת מחדל לגובה */
+            height: 100vh; /* הגבלת גובה המסך */
+            overflow: hidden;
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            background-color: black;
         }
         .top-image img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* שמירה על פרופורציות */
+            width: 100%; /* תמונה תתפוס את כל הרוחב */
+            height: auto;
+            object-fit: contain; /* שמירה על פרופורציות, ללא חיתוך */
+            object-position: center center; /* יישור התמונה במרכז */
         }
         header, section {
             padding: 20px;
@@ -46,7 +46,7 @@
             margin: 0;
         }
         header p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin: 10px 0 0;
         }
         section p {
@@ -66,31 +66,21 @@
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* עיצוב רספונסיבי לדסקטופ */
         @media (min-width: 1024px) {
-            header h1 {
-                font-size: 3em; /* הגדלת גודל הכותרת */
-            }
-            header p {
-                font-size: 2em; /* הגדלת הטקסט של התיאור */
-            }
-            .top-image {
-                max-height: 50vh; /* הגדלת גובה התמונה במסכים גדולים */
-            }
             section p {
-                font-size: 2em; /* הגדלת הטקסט בדסקטופ */
+                font-size: 2em; /* הגדלת הטקסט למסכים גדולים */
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>פיתוח אפליקציות בהתאמה אישית</h1>
-        <p>חדשנות ומצוינות שמדברות בעד עצמן</p>
-    </header>
     <div class="top-image">
         <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
     </div>
+    <header>
+        <h1>פיתוח אפליקציות בהתאמה אישית - ברק אהרונוב</h1>
+        <p>חדשנות ומצוינות שמדברות בעד עצמן.</p>
+    </header>
     <section>
         <p>רוצים להפוך את הרעיון שלכם למציאות?</p>
         <a href="https://wa.me/972542309598" class="cta-button">שלח הודעה בוואטסאפ</a>
