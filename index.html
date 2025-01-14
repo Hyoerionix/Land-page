@@ -18,18 +18,20 @@
             align-items: center;
             min-height: 100vh;
         }
-        .top-image {
+        .top-image-wrapper {
             width: 100%;
             height: auto;
-            max-height: 35vh; /* ברירת מחדל לגובה במסכים קטנים */
+            max-height: 35vh; /* ברירת מחדל לגובה */
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* שיטה למנוע חיתוך עליון */
             overflow: hidden;
+            background-color: black;
+            padding-top: 2vh; /* רצועת רווח שחור מעל התמונה */
         }
-        .top-image img {
+        .top-image-wrapper img {
             max-width: 100%;
-            max-height: 100%;
+            height: auto;
             object-fit: contain; /* שמירה על פרופורציות */
         }
         header, section {
@@ -66,21 +68,21 @@
             background-color: #16a085;
         }
         @media (min-width: 1024px) {
-            .top-image {
-                max-height: 17.5vh; /* הקטנה ב-50% במסכי מחשב */
+            .top-image-wrapper {
+                max-height: 25vh; /* גובה קטן יותר בדסקטופ */
             }
-            .top-image img {
-                max-width: 50%; /* הקטנת רוחב התמונה ב-50% */
-                height: auto; /* שמירה על פרופורציות */
+            .top-image-wrapper img {
+                max-width: 40%; /* הקטנת רוחב התמונה ב-50% במסכי מחשב */
+                height: auto;
             }
             section p {
-                font-size: 2em; /* הגדלת הטקסט למסכי מחשב */
+                font-size: 2em; /* הגדלת הטקסט בדסקטופ */
             }
         }
     </style>
 </head>
 <body>
-    <div class="top-image">
+    <div class="top-image-wrapper">
         <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
     </div>
     <header>
