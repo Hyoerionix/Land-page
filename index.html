@@ -52,6 +52,7 @@
         }
         section p {
             font-size: 1.5em; /* הגדלתי את הטקסט במובייל */
+            margin-top: 0; /* ביטול הרווח */
         }
         .cta-button {
             display: inline-block;
@@ -67,31 +68,24 @@
         .cta-button:hover {
             background-color: #16a085;
         }
-        /* עיצוב לדסקטופ בלבד */
+        /* עיצוב לדסקטופ */
         @media (min-width: 1024px) {
             .top-image {
-                max-height: 40vh; /* הגדלתי את גובה התמונה ב-30% */
+                max-height: 30vh; /* התאמת גובה לתמונה במסכים גדולים */
             }
             .top-image img {
-                width: 125%; /* הגדלה ב-25% */
-                height: auto;
+                width: 60%; /* הקטנה ל-25% */
+                height: 70%;
                 object-fit: contain; /* שמירה על פרופורציות */
             }
             section p {
                 font-size: 2em; /* הגדלת הטקסט במסכים גדולים */
-                margin-top: 0; /* צמצום המרווח */
-            }
-            header p {
-                margin: 10px 0 5px; /* צמצום המרווח בין הפסקאות */
             }
         }
         /* עיצוב במובייל */
         @media (max-width: 1024px) {
             header h1 {
                 font-size: 2.5em; /* הקטנתי את גודל הטקסט במובייל */
-            }
-            section p {
-                font-size: 1.8em; /* הגדלתי את הטקסט במובייל */
             }
         }
     </style>
