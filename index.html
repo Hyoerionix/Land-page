@@ -15,38 +15,49 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
         .content-wrapper {
             display: flex;
             flex-direction: column;
             width: 100%;
+            height: 100vh;
         }
         .text-content {
             flex: 1;
-            padding: 20px;
             text-align: center;
+            position: absolute;
+            top: 10%; /* מתחיל בגובה 10% של המסך */
+            left: 5%;
+            width: 40%; /* תופס 40% מהרוחב */
         }
         header h1 {
-            font-size: 2.5em;
+            font-size: 5em; /* מוגדל פי 2 */
             margin: 0;
         }
         header p {
-            font-size: 1.2em;
-            margin: 5px 0; /* הקטנת הרווח */
+            font-size: 2.4em; /* מוגדל פי 2 */
+            margin: 10px 0;
+        }
+        section {
+            position: absolute;
+            bottom: 10%; /* הכפתור מסתיים ב-10% מגובה המסך */
+            left: 5%;
+            width: 40%;
+            text-align: center;
         }
         section p {
-            font-size: 1.2em;
-            margin: 15px 0;
+            font-size: 2.4em; /* מוגדל פי 2 */
+            margin: 20px 0;
         }
         .cta-button {
             display: inline-block;
             background-color: #1abc9c;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 40px; /* מוגדל פי 2 */
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2em;
-            margin-top: 15px;
+            font-size: 2.4em; /* מוגדל פי 2 */
         }
         .cta-button:hover {
             background-color: #16a085;
@@ -56,24 +67,36 @@
             background: url('https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp') no-repeat center center;
             background-size: contain; /* שמירה על כל התמונה */
             height: 100%;
-            width: 100%;
+            width: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
         }
-        /* עיצוב לדסקטופ */
-        @media (min-width: 1024px) {
+        /* עיצוב מובייל */
+        @media (max-width: 1024px) {
             .content-wrapper {
-                flex-direction: row;
-            }
-            .text-content {
-                flex: 1;
-                max-width: 50%;
-                text-align: center;
-                display: flex;
                 flex-direction: column;
-                justify-content: center;
+                text-align: center;
+            }
+            .text-content, section {
+                position: static;
+                width: 90%;
+                margin: 0 auto;
+            }
+            header h1 {
+                font-size: 2.5em; /* חזרה לדיפולט מובייל */
+            }
+            header p, section p {
+                font-size: 1.2em; /* חזרה לדיפולט מובייל */
+            }
+            .cta-button {
+                font-size: 1.2em; /* חזרה לדיפולט מובייל */
+                padding: 10px 20px;
             }
             .top-image {
-                max-width: 50%;
-                height: 100vh; /* תופס את כל הגובה */
+                position: static;
+                width: 100%;
+                height: auto;
             }
         }
     </style>
@@ -85,11 +108,11 @@
                 <h1>פיתוח אפליקציות</h1>
                 <p>לאנדרואיד ו-iOS, לכל צורך ומטרה,<br>עם פתרונות טכנולוגיים מותאמים אישית.</p>
             </header>
-            <section>
-                <p>הפכו היום את הרעיון שלכם למציאות!</p>
-                <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
-            </section>
         </div>
+        <section>
+            <p>הפכו היום את הרעיון שלכם למציאות!</p>
+            <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
+        </section>
         <div class="top-image"></div>
     </div>
 </body>
