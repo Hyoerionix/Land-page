@@ -14,27 +14,35 @@
             color: #ffffff;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: flex-start;
+            align-items: center;
+            height: 100vh; /* גובה מלא למסך */
+            overflow: hidden; /* מניעת גלילה */
         }
         .top-image {
-            width: 85%;
-            height: 60vh; /* גובה מלא למסך */
-            background: url('https://i.postimg.cc/c1tWZ8XN/Untitled-Project-1.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://i.postimg.cc/j5jyY2v9/file-5-TC99w-Bk-LB1jx-TG2pk9e-Tk.webp') no-repeat center center;
+            background-size: contain; /* שמירה על כל התמונה ללא חיתוך */
         }
         header {
             width: 100%;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 20px;
             background-color: rgba(0, 0, 0, 0.8); /* רקע שחור שקוף למלל */
+            position: absolute;
+            bottom: 0; /* הצמדת המלל לתחתית המסך */
         }
         header h1 {
             font-size: 2.5em;
-            margin: 0 0 20px;
+            margin: 0 0 10px;
         }
         header p {
             font-size: 1.2em;
-            margin: 0 0 20px;
+            margin: 0 0 10px;
         }
         .cta-button {
             display: inline-block;
