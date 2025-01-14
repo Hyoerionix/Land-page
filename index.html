@@ -16,19 +16,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
         .top-image {
             width: 100%;
-            max-height: 35vh; /* מגבלת גובה יחסית */
-            overflow: hidden;
+            height: 35vh; /* הגבלת גובה ל-35% מגובה המסך */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
         .top-image img {
-            width: auto; /* שמירה על הפרופורציות */
+            width: auto; /* שמירה על פרופורציות */
             height: 100%; /* הגבלת גובה */
-            display: block;
         }
         header, section {
             padding: 20px;
@@ -59,6 +59,11 @@
         }
         .cta-button:hover {
             background-color: #16a085;
+        }
+        @media (min-width: 1024px) {
+            .top-image {
+                height: 50vh; /* התאמה למסכים גדולים */
+            }
         }
     </style>
 </head>
