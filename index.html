@@ -1,100 +1,105 @@
-<style>
-    /* קוד מקור למובייל - נשאר כפי שהוא */
-    body {
-        font-family: 'Assistant', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #000;
-        color: #ffffff;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-    }
-    .top-image {
-        width: 100%;
-        height: auto;
-        max-height: 35vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        background-color: black;
-    }
-    .top-image img {
-        width: 90%;
-        height: auto;
-        object-fit: contain;
-    }
-    header, section {
-        padding: 20px;
-        margin: 10px auto;
-        max-width: 800px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-    header h1 {
-        font-size: 3em;
-        margin: 0;
-    }
-    header p {
-        font-size: 1.5em;
-        margin: 10px 0 0;
-    }
-    section p {
-        font-size: 1.5em;
-    }
-    .cta-button {
-        display: inline-block;
-        background-color: #1abc9c;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        margin-top: 15px;
-        font-size: 1.2em;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    .cta-button:hover {
-        background-color: #16a085;
-    }
-
-    /* עיצוב לדסקטופ בלבד */
-    @media (min-width: 1024px) {
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פיתוח אפליקציות - ברק אהרונוב</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap');
         body {
-            flex-direction: row;
-            justify-content: space-between;
+            font-family: 'Assistant', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ffffff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+        /* ברירת מחדל במובייל */
         .top-image {
-            width: 47%;
+            width: 100%;
             height: auto;
-            margin-right: 3%; /* השארת מרווח קטן מהקצה */
+            max-height: 35vh; /* ברירת מחדל לגובה */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: black;
         }
         .top-image img {
-            width: 100%; /* התמונה תתפוס 100% מהקונטיינר שלה */
+            width: 90%; /* התמונה תתפוס את רוב רוחב המסך */
             height: auto;
+            object-fit: contain; /* שמירה על פרופורציות */
         }
-        .content {
-            width: 47%;
-            text-align: left;
-            margin-left: 3%;
+        header, section {
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px; /* יצירת מרווח ברור בין השורות */
+            font-size: 3em; /* גודל טקסט בכותרת לדסקטופ */
+            margin: 0;
         }
         header p {
-            margin-bottom: 20px; /* מרווח בין הכותרת לטקסט */
+            font-size: 1.5em; /* הגדלתי במעט את הטקסט הזה */
+            margin: 10px 0 0;
         }
         section p {
-            line-height: 1.5; /* שיפור הקריאות */
-            margin-bottom: 15px; /* מרווח ברור */
+            font-size: 1.5em; /* הגדלתי את הטקסט במובייל */
         }
         .cta-button {
-            display: block;
-            margin: 0 auto; /* ממורכז מתחת לטקסט */
+            display: inline-block;
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 1.2em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-    }
-</style>
+        .cta-button:hover {
+            background-color: #16a085;
+        }
+        /* עיצוב לדסקטופ */
+        @media (min-width: 1024px) {
+            .top-image {
+                max-height: 30vh; /* התאמת גובה לתמונה במסכים גדולים */
+            }
+            .top-image img {
+                width: 25%; /* הקטנה ל-25% */
+                height: auto;
+                object-fit: contain; /* שמירה על פרופורציות */
+            }
+            section p {
+                font-size: 2em; /* הגדלת הטקסט במסכים גדולים */
+            }
+        }
+        /* עיצוב במובייל */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 2.5em; /* הקטנתי את גודל הטקסט במובייל */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-image">
+        <img src="https://i.postimg.cc/MpvZ5xHz/file-TG6h2k-K.webp" alt="Apple and Android Logos">
+    </div>
+    <header>
+        <h1>פיתוח אפליקציות</h1>
+        <p>לאנדרואיד ו-iOS, לכל צורך ומטרה, עם פתרונות טכנולוגיים מותאמים אישית.</p>
+    </header>
+    <section>
+        <p>הפכו היום את הרעיון שלכם למציאות!</p>
+        <a href="https://wa.me/972542309598" class="cta-button">שלחו הודעה בוואטסאפ</a>
+    </section>
+</body>
+</html>
